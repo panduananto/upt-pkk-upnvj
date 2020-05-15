@@ -1,0 +1,50 @@
+@import "global.css";
+
+.nav-panel-container {
+  display: flex;
+  align-items: center;
+  background-image: url("../assets/images/history-background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
+  padding:25px 25px;
+  position: relative;
+  z-index: 0;
+}
+
+.nav-panel-container::before {
+  content: "";
+  width: 100%;
+  height: 200px;
+  background: rgba(0, 0, 0, 0.71);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.nav-panel-container h2 {
+  color: white;
+  font-size: 44px;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rosybrown;
+  height: 1000px;
+  padding: 40px 80px;
+}
+
+.side-bar {
+  flex-basis: 20%;
+  background-color: sandybrown;
+  height: 600px;
+}
+
+.article {
+  flex-basis: 75%;
+  background-color: sienna;
+}
