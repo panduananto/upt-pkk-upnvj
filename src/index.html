@@ -14,7 +14,7 @@
       <span class="logo">
         <img src="assets/images/upnvj_logo.png" alt="logo_upn" />
       </span>
-      <ul>
+      <ul id="navbar-menu">
         <li><a href="">Home</a></li>
         <li><a href="">Profile</a></li>
         <li><a href="">Kerjasama</a></li>
@@ -24,6 +24,12 @@
         <li><a href="">Tracestudy</a></li>
         <li><a href="">Kontak</a></li>
       </ul>
+      <span class="navbar-toggle" id="navbar-toggler">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff">
+          <path d="M0 0h24v24H0z" fill="none" />
+          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+        </svg>
+      </span>
     </nav>
 
     <main>
@@ -32,7 +38,11 @@
           <div class="home-header-detail">
             <h1>UPT Pengembangan Karir dan Kewirausahaan</h1>
           </div>
-          <div class="home-header-panel">
+        </div>
+      </section>
+      <section id="info-panel">
+        <div class="home-header-panel">
+          <div class="panel-item-col">
             <div class="item-panel">
               <div class="item-panel-image">
                 <img
@@ -40,9 +50,9 @@
                   alt="seminar-image"
                 />
               </div>
-              <span class="item-panel-text">
+              <a href="#" class="item-panel-text">
                 Seminar
-              </span>
+              </a>
             </div>
             <div class="item-panel">
               <div class="item-panel-image">
@@ -51,10 +61,12 @@
                   alt="pelatihan-image"
                 />
               </div>
-              <span class="item-panel-text">
+              <a href="#" class="item-panel-text">
                 Pelatihan
-              </span>
+              </a>
             </div>
+          </div>
+          <div class="panel-item-col">
             <div class="item-panel">
               <div class="item-panel-image">
                 <img
@@ -62,9 +74,9 @@
                   alt="kewirausahaan-image"
                 />
               </div>
-              <span class="item-panel-text">
+              <a href="#" class="item-panel-text">
                 Kewirausahaan
-              </span>
+              </a>
             </div>
             <div class="item-panel">
               <div class="item-panel-image">
@@ -73,9 +85,9 @@
                   alt="job-fair-image"
                 />
               </div>
-              <span class="item-panel-text">
+              <a href="#" class="item-panel-text">
                 Job Fair
-              </span>
+              </a>
             </div>
           </div>
         </div>
@@ -89,11 +101,12 @@
               </div>
               <div class="item-card-text">
                 <h3>Judul Artikel 1</h3>
-                <p>
+                <p id="excerpt">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Repellendus fuga ad cum aspernatur iusto similique vel
                   temporibus rem illum impedit?
                 </p>
+                <a href="">Read more</a>
               </div>
             </div>
             <div class="item-card-column">
@@ -102,11 +115,12 @@
               </div>
               <div class="item-card-text">
                 <h3>Judul Artikel 2</h3>
-                <p>
+                <p id="excerpt">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Repellendus fuga ad cum aspernatur iusto similique vel
                   temporibus rem illum impedit?
                 </p>
+                <a href="">Read more</a>
               </div>
             </div>
             <div class="item-card-column">
@@ -115,11 +129,12 @@
               </div>
               <div class="item-card-text">
                 <h3>Judul Artikel 3</h3>
-                <p>
+                <p id="excerpt">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Repellendus fuga ad cum aspernatur iusto similique vel
                   temporibus rem illum impedit?
                 </p>
+                <a href="">Read more</a>
               </div>
             </div>
           </div>
@@ -269,5 +284,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./scripts/index.js"></script>
   </body>
 </html>
