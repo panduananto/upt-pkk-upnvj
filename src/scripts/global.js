@@ -7,18 +7,40 @@ const toggleNavbar = () => {
 
 navbarToggler.addEventListener("click", toggleNavbar);
 
-// const listElement = document.querySelectorAll(".side-bar a");
-// let itemBreadCrumbElement = document.querySelector(".item");
+const pageArray = [
+  "sejarah.html",
+  "visimisi.html",
+  "strukturorganisasi.html",
+  "sop.html",
+  "tugasfungsi",
+  "programkerja",
+];
 
-// listElement.forEach((item, index) => {
-//   console.log(item, index);
-//   item.addEventListener("click", () => {
-//     let linkItem = item.getAttribute("href");
-//     let textItem = item.innerHTML;
-//     let currentItem =
-//     `
-//       <a href="${linkItem}">${textItem}</a>
-//     `
-//     itemBreadCrumbElement.innerHTML += currentItem;
-//   });
-// });
+const pageID = document.querySelector("body").getAttribute("id");
+
+let url = window.location.href;
+let array = url.split("/");
+let beforeLastSegmentOfUrl = array[array.length - 2];
+let lastSegmentOfUrl = array[array.length - 1];
+
+const prevButton = document.getElementById("prev-button");
+const nextButton = document.getElementById("next-button");
+
+if (pageArray.includes(lastSegmentOfUrl)) {
+  let indexCurrentElement = pageArray.indexOf(lastSegmentOfUrl);
+  let indexPrevPage = indexCurrentElement - 1;
+  let indexNextPage = indexCurrentElement + 1;
+
+  if (indexPrevPage === -1) {
+    prevButton.setAttribute("href", `../index.html`);
+  } else {
+    prevButton.setAttribute(
+      "href",
+      `../${beforeLastSegmentOfUrl}/${pageArray[indexPrevPage]}`
+    );
+  }
+  nextButton.setAttribute(
+    "href",
+    `../${beforeLastSegmentOfUrl}/${pageArray[indexNextPage]}`
+  );
+}

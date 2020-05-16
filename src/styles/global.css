@@ -77,6 +77,41 @@ nav ul li a:hover::after {
   width: 40px;
 }
 
+.page-nav {
+  display: flex;
+  flex-direction: row;
+}
+
+.page-nav .button-page {
+  display: flex;
+  align-items: center;
+  flex-basis: 50%;
+  background-color: #4a5568;
+  height: 250px;
+  padding: 0 25px;
+}
+
+.button-page:hover {
+  background-color: #1a202c;
+  padding: 50px;
+  transition: 0.2s ease-in-out;
+}
+
+.button-page a {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.previous {
+  justify-content: flex-end;
+}
+
+.next {
+  justify-content: flex-start;
+}
+
 .footer {
   width: 100%;
 }
