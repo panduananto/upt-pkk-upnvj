@@ -11,17 +11,27 @@ const pageArray = [
   "sejarah.html",
   "visimisi.html",
   "strukturorganisasi.html",
+  "tugasfungsi.html",
+  "programkerja.html",
   "sop.html",
-  "tugasfungsi",
-  "programkerja",
+  "magang.html",
+];
+
+const pathArray = [
+  "profile",
+  "magang",
 ];
 
 const pageID = document.querySelector("body").getAttribute("id");
 
 let url = window.location.href;
-let array = url.split("/");
-let beforeLastSegmentOfUrl = array[array.length - 2];
-let lastSegmentOfUrl = array[array.length - 1];
+let arrayUrl = url.split("/");
+let beforeLastSegmentOfUrl = arrayUrl[arrayUrl.length - 2];
+let lastSegmentOfUrl = arrayUrl[arrayUrl.length - 1];
+
+let path = window.location.pathname;
+let arrayPath = path.split("/");
+let beforeLastSegmentOfPath = arrayPath[arrayPath.length - 2];
 
 const prevButton = document.getElementById("prev-button");
 const nextButton = document.getElementById("next-button");
@@ -34,13 +44,12 @@ if (pageArray.includes(lastSegmentOfUrl)) {
   if (indexPrevPage === -1) {
     prevButton.setAttribute("href", `../index.html`);
   } else {
-    prevButton.setAttribute(
-      "href",
-      `../${beforeLastSegmentOfUrl}/${pageArray[indexPrevPage]}`
-    );
+    prevButton.setAttribute("href", `../${beforeLastSegmentOfUrl}/${pageArray[indexPrevPage]}`);
   }
-  nextButton.setAttribute(
-    "href",
-    `../${beforeLastSegmentOfUrl}/${pageArray[indexNextPage]}`
-  );
+
+  if (indexCurrentElement < 5) {
+    nextButton.setAttribute("href", `../${pathArray[0]}/${pageArray[indexNextPage]}`);
+  } else {
+    nextButton.setAttribute("href", `../${pathArray[1]}/${pageArray[indexNextPage]}`);
+  }
 }
