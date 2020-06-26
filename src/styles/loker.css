@@ -1,0 +1,151 @@
+@import "global.css";
+
+.nav-panel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  background-image: url("../assets/images/loker.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
+  padding:25px 25px;
+  position: relative;
+  z-index: 0;
+}
+
+.nav-panel-container::before {
+  content: "";
+  width: 100%;
+  height: 200px;
+  background: rgba(0, 0, 0, 0.71);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.nav-panel-container h2 {
+  color: white;
+  font-size: 44px;
+}
+
+.breadcrumb .item a {
+  color: white;
+  text-decoration: none;
+}
+
+.breadcrumb .item span {
+  color: white;
+  text-decoration: none;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 40px 80px;
+}
+
+.side-bar {
+  flex-basis: 20%;
+  background-color: #6351CE;
+  height: fit-content;
+}
+
+.side-bar ul li {
+  border-bottom: 1px solid #161c27;
+  list-style-type: none;
+}
+
+.side-bar ul li:hover {
+  background-color: #434190;
+  transition: 0.4s ease-in-out;
+}
+
+.side-bar ul li a {
+  display: block;
+  color: white;
+  padding: 15px 15px;
+  text-decoration: none;
+}
+
+
+
+
+.loker {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 75%;
+    font-size: 28px;
+    align-items: center;
+    
+    
+}
+
+
+.cards
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center; 
+  font-size: 24px;
+  
+}
+.card {
+  border-radius: 25px;
+  margin: 55px 10px;
+  align-self: start;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 195px;
+  height: 300px;
+  text-align: center;
+
+}
+
+.card p{
+  font-size: 18px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.image{
+
+  margin-top: 5px;
+  width: 170px;
+  height: 140px;
+}
+
+img{
+  
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  width: 195px;
+  height: 100%;
+}
+
+
+
+/* Respopnsive breakpoint */
+
+@media screen and (max-width: 1024px) {
+
+}
+
+@media screen and (max-width: 640px) {
+  .content-container {
+    padding: 40px 20px;
+  }
+
+  .article {
+    flex-basis: 100%;
+  }
+
+  .side-bar {
+    display: none;
+  }
+
+}
