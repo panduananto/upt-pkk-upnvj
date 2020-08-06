@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600;700&family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600;700&family=Roboto:wght@100;300;400;500;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -121,7 +121,7 @@ nav ul li a:hover::after {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: #6351CE;
+  background-color: #6351ce;
   padding: 30px 25px;
   width: 100%;
 }
@@ -148,7 +148,7 @@ nav ul li a:hover::after {
 .footer-detail {
   display: flex;
   flex-direction: row;
-  background-color: #1C2331;
+  background-color: #1c2331;
   height: 100%;
   padding: 40px 25px;
 }
@@ -205,10 +205,56 @@ nav ul li a:hover::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #161C27;
+  background-color: #161c27;
   color: white;
   height: 80px;
   width: 100%;
+}
+
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn {
+  margin: 0 10px;
+}
+
+.btn-primary {
+  border: none;
+  border-radius: 5px;
+  background-color: #6351ce;
+  padding: 16px;
+}
+
+.btn-primary:hover {
+  background-color: #311b92;
+  cursor: pointer;
+}
+
+.btn-primary span {
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.btn-secondary {
+  background-color: #ffffff;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+  padding: 16px;
+}
+
+.btn-secondary:hover {
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary span {
+  color: #1a202c;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  letter-spacing: 2px;
 }
 
 /* Responsive breakpoint */
@@ -258,7 +304,7 @@ nav ul li a:hover::after {
     flex-direction: column;
     padding: 30px 0;
   }
-  
+
   .sosial-media-connect-text {
     margin-bottom: 25px;
   }
@@ -269,13 +315,13 @@ nav ul li a:hover::after {
     align-items: center;
     justify-content: center;
   }
-  
+
   .footer-detail-item {
     margin: 15px 15px;
     text-align: center;
     width: 100%;
   }
-  
+
   .footer-detail-item .title-footer-detail {
     border-bottom: 3px solid #6351ce;
     display: inline-block;
@@ -285,29 +331,29 @@ nav ul li a:hover::after {
     padding-bottom: 5px;
     margin-bottom: 30px;
   }
-  
+
   .footer-detail-item p {
     color: white;
   }
-  
+
   .footer-detail-item ul {
     list-style-type: none;
   }
-  
+
   .footer-detail-item li {
     margin-bottom: 20px;
   }
-  
+
   .footer-detail-item li a {
     color: white;
     text-decoration: none;
   }
-  
+
   .contact-footer span {
     color: white;
     vertical-align: middle;
   }
-  
+
   .contact-footer svg {
     height: 25px;
     margin-right: 15px;

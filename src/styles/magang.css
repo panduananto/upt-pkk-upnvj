@@ -148,30 +148,124 @@
   font-size: 12px;
 }
 
-/* Add some padding inside the card container */
-.container {
-  padding: 2px 16px;
-}
-
-.daftarmagang {
-  width: 25%;
+.daftar-magang-container {
+  display: flex;
   flex-direction: column;
   flex-basis: 75%;
-  font-size: 22px;
-  border-radius: 5px;
-  color: #434190;
+  justify-content: center;
 }
 
-input[type="text"],
-select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
+.daftar-magang-container h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 26px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
   display: inline-block;
-  font-size: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+  margin-bottom: 12px;
+}
+
+.form-group .control-label {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+form .form-control {
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  color: #495057;
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  outline: 0;
+  padding: 8px 15px;
+  transition: border-color 0.15s ease-in-out;
+  width: 100%;
+}
+
+form .form-control:focus {
+  border: 3px solid #b39ddb;
+}
+
+.form-title {
+  margin: 38px 0 10px 0;
+}
+
+.form-title h5 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+}
+
+.form-title hr {
+  border: 0;
+  border-top: 1px solid #ced4da;
+  margin: 20px 0;
+}
+
+.form-group-file {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.file {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  height: 2.5rem;
+}
+
+input#file {
+  display: none;
+}
+
+.file-custom {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 0;
+  height: 2.5rem;
+  padding: 0.5rem 1rem;
+  line-height: 1.5;
+  color: #555;
+  background-color: #fff;
+  border: 0.075rem solid #ddd;
+  border-radius: 0.25rem;
+  box-shadow: inset 0 0.2rem 0.4rem rgba(0, 0, 0, 0.05);
+  user-select: none;
+}
+
+.file-custom:hover {
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.05);
+}
+
+.file-custom:before {
+  position: absolute;
+  top: -0.075rem;
+  right: -0.075rem;
+  bottom: -0.075rem;
+  z-index: 6;
+  display: block;
+  content: "Browse";
+  padding: 0.5rem 1rem;
+  line-height: 1.5;
+  color: #555;
+  background-color: #eee;
+  border: 0.075rem solid #ddd;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.file-custom:after {
+  content: "Choose file...";
 }
 
 input[type="date"],
@@ -204,7 +298,7 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-[type="file"] {
+/* [type="file"] {
   height: 0;
   overflow: hidden;
   width: 0;
@@ -221,7 +315,7 @@ input[type="submit"] {
   margin: 8px 0;
   border-radius: 4px;
   cursor: pointer;
-}
+} */
 
 /* Responsive breakpoint */
 
@@ -252,7 +346,7 @@ input[type="submit"] {
   .info-magang-container .card-magang-row {
     flex-direction: row;
   }
-  
+
   .info-magang-container .card-magang-column {
     width: 100%;
   }
