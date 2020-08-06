@@ -45,78 +45,107 @@
             <ul>
               <li><a href="./infomagang.html">Info Magang</a></li>
               <li><a href="./pendaftaranmagang.html">Pendaftaran Magang</a></li>
-              <li><a href="#">Insert Data Magang</a></li>
+              <li><a href="./inputdatamagang.html">Insert Data Magang</a></li>
             </ul>
           </div>
-          <div class="daftarmagang">
-            <p>INPUT DATA MAGANG FAKULTAS</p>
-            <form>
-              <table width="75%">
-                <tr>
-                  <td width="25%">Nama</td>
-                  <td><input type="text" name="nama" placeholder="NAMA" /></td>
-                </tr>
-
-                <tr>
-                  <td>NIM</td>
-                  <td><input type="text" name="nim" placeholder="NIM" /></td>
-                </tr>
-
-                <tr>
-                  <td>Fakultas</td>
-                  <td>
-                    <input type="text" name="fakultas" placeholder="FAKULTAS" />
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>PRODI</td>
-                  <td>
-                    <input type="text" name="prodi" placeholder="PRODI" />
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>IPK</td>
-                  <td><input type="text" name="ipk" placeholder="IPK" /></td>
-                </tr>
-
-                <tr>
-                  <td>Perusahaan</td>
-                  <td>
-                    <input
-                      type="text"
-                      name="perusahaan"
-                      placeholder="PERUSAHAAN"
-                    />
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>Tanggal Mulai</td>
-                  <td><input type="date" name="tanggalmulai" /></td>
-                </tr>
-
-                <tr>
-                  <td>Tanggal Selesai</td>
-                  <td><input type="date" name="tanggalselesai" /></td>
-                </tr>
-
-                <tr>
-                  <td>Jenis</td>
-                  <td>
-                    <input type="radio" name="jenis" value="Magang" /> Magang
-                  </td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td><input type="radio" name="jenis" value="KP" /> KP</td>
-                </tr>
-              </table>
-              <div class="button">
-                <input type="submit" value="Submit" />
+          <div class="daftar-magang-container">
+            <h3>Formulir Input Data Mahasiswa Magang</h3>
+            <form class="form-group">
+              <div class="form-title">
+                <h5>Data Mahasiswa</h5>
+                <hr />
+              </div>
+              <div class="form-group">
+                <label class="control-label" for="nama">
+                  Nama Lengkap
+                </label>
+                <input name="name" type="text" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label class="control-label" for="nim">
+                  NIM
+                </label>
+                <input name="nim" type="text" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label class="control-label" for="fakultas">
+                  Fakultas
+                </label>
+                <input name="fakultas" type="text" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label class="control-label" for="prodi">
+                  Program Studi
+                </label>
+                <input name="prodi" type="text" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label class="control-label" for="ipk">
+                  IPK
+                </label>
+                <input name="ipk" type="text" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label class="control-label" for="perusahaan">
+                  Perusahaan
+                </label>
+                <input name="perusahaan" type="text" class="form-control" />
+              </div>
+              <div class="form-group-date">
+                <label class="control-label" for="tanggal-mulai">
+                  Tanggal Mulai
+                </label>
+                <input name="tanggal-mulai" type="date" class="form-control" />
+              </div>
+              <div class="form-group-date">
+                <label class="control-label" for="tanggal-selesai">
+                  Tanggal Selesai
+                </label>
+                <input
+                  name="tanggal-selesai"
+                  type="date"
+                  class="form-control"
+                />
               </div>
             </form>
+            <div class="form-group">
+              <label class="control-label" for="jenis-kegiatan">
+                Jenis Kegiatan
+              </label>
+              <div class="form-check">
+                <input
+                  id="jenis-kegiatan-magang"
+                  name="jenis-kegiatan-magang"
+                  type="checkbox"
+                  class="form-check-input"
+                />
+                <label class="form-check-label" for="jenis-kegiatan-magang">
+                  Magang
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  id="jenis-kegiatan-kp"
+                  name="jenis-kegiatan-kp"
+                  type="checkbox"
+                  class="form-check-input"
+                />
+                <label class="form-check-label" for="jenis-kegiatan-kp">
+                  Kerja Praktek
+                </label>
+              </div>
+            </div>
+            <div class="form-title">
+              <hr />
+            </div>
+            <div class="button-group">
+              <button type="submit" class="btn btn-primary">
+                <span>KIRIM DATA</span>
+              </button>
+              <button type="submit" class="btn btn-secondary">
+                <span>RESET DATA</span>
+              </button>
+            </div>
           </div>
         </div>
       </section>
