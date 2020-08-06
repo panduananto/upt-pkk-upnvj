@@ -14,13 +14,12 @@ const pageArray = [
   "tugasfungsi.html",
   "programkerja.html",
   "sop.html",
-  "magang.html",
+  "infomagang.html",
+  "inputdatamagang.html",
+  "pendaftaranmagang.html",
 ];
 
-const pathArray = [
-  "profile",
-  "magang",
-];
+const pathArray = ["profile", "magang"];
 
 const pageID = document.querySelector("body").getAttribute("id");
 
@@ -44,12 +43,21 @@ if (pageArray.includes(lastSegmentOfUrl)) {
   if (indexPrevPage === -1) {
     prevButton.setAttribute("href", `../index.html`);
   } else {
-    prevButton.setAttribute("href", `../${beforeLastSegmentOfUrl}/${pageArray[indexPrevPage]}`);
+    prevButton.setAttribute(
+      "href",
+      `../${beforeLastSegmentOfUrl}/${pageArray[indexPrevPage]}`
+    );
   }
 
   if (indexCurrentElement < 5) {
-    nextButton.setAttribute("href", `../${pathArray[0]}/${pageArray[indexNextPage]}`);
+    nextButton.setAttribute(
+      "href",
+      `../${pathArray[0]}/${pageArray[indexNextPage]}`
+    );
   } else {
-    nextButton.setAttribute("href", `../${pathArray[1]}/${pageArray[indexNextPage]}`);
+    nextButton.setAttribute(
+      "href",
+      `../${pathArray[1]}/${pageArray[indexNextPage]}`
+    );
   }
 }

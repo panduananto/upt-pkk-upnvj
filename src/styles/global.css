@@ -211,7 +211,7 @@ nav ul li a:hover::after {
   width: 100%;
 }
 
-/* Respopnsive breakpoint */
+/* Responsive breakpoint */
 
 @media screen and (max-width: 1024px) {
   nav {
