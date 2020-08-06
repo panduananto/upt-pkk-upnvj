@@ -10,7 +10,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 200px;
-  padding:25px 25px;
+  padding: 25px 25px;
   position: relative;
   z-index: 0;
 }
@@ -50,7 +50,7 @@
 
 .side-bar {
   flex-basis: 20%;
-  background-color: #6351CE;
+  background-color: #6351ce;
   height: fit-content;
 }
 
@@ -71,81 +71,144 @@
   text-decoration: none;
 }
 
-
-
-
-.loker {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 75%;
-    font-size: 28px;
-    align-items: center;
-    
-    
+.info-magang-container {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 75%;
+  justify-content: center;
 }
 
+.info-magang-container h3 {
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 30px;
+  text-align: left;
+}
 
-.cards
-{
+.info-magang-container .card-magang-row {
   display: flex;
   flex-direction: row;
-  align-items: center; 
-  font-size: 24px;
-  
-}
-.card {
-  border-radius: 25px;
-  margin: 55px 10px;
-  align-self: start;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  width: 195px;
-  height: 300px;
-  text-align: center;
-
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 -15px;
+  width: 100%;
 }
 
-.card p{
-  font-size: 18px;
-  margin-left: auto;
-  margin-right: auto;
-
+.info-magang-container .card-magang-column {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.2);
+  margin: 0 15px 40px 15px;
+  width: 50%;
 }
 
-.image{
-
-  margin-top: 5px;
-  width: 170px;
-  height: 140px;
+.info-magang-container .image-magang {
+  border-radius: 10px 10px 0 0;
+  height: 50%;
+  position: relative;
+  overflow: hidden;
 }
 
-img{
-  
-  border-top-right-radius: 25px;
-  border-top-left-radius: 25px;
-  width: 195px;
+.info-magang-container img {
+  object-fit: cover;
+  width: 100%;
   height: 100%;
 }
 
+.info-item-magang-container {
+  padding: 15px 15px;
+  text-align: left;
+}
 
+.text-durasi-magang {
+  border: 1px solid black;
+  border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px;
+}
 
-/* Respopnsive breakpoint */
+.text-job-desc {
+  color: #6351ce;
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  margin: 20px 0 35px 0;
+  text-decoration: none;
+}
+
+.text-company-hiring {
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+}
+
+.more-info-item-magang {
+  display: flex;
+  justify-content: space-between;
+  background-color: #eeeeee;
+  padding: 15px 15px;
+}
+
+.more-info-item-magang span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+}
+
+/* Responsive breakpoint */
+
+@media screen and (max-width: 1168px) {
+  .text-job-desc {
+    font-size: 18px;
+  }
+}
 
 @media screen and (max-width: 1024px) {
+  .content-container {
+    flex-direction: column;
+    padding: 40px 40px;
+  }
+  
+  .side-bar {
+    margin-bottom: 30px;
+  }
 
+  .info-item-magang-container {
+    padding: 15px 15px;
+  }
+
+  .info-magang-container .card-magang-row {
+    flex-direction: row;
+  }
+  
+  .info-magang-container .card-magang-column {
+    width: 100%;
+  }
+
+  .more-info-item-magang {
+    padding: 15px 15px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .text-job-desc {
+    font-size: 16px;
+  }
+
+  .more-info-item-magang span {
+    font-size: 10px;
+  }
 }
 
 @media screen and (max-width: 640px) {
-  .content-container {
-    padding: 40px 20px;
+  .info-magang-container .card-magang-row {
+    flex-direction: column;
   }
 
-  .article {
-    flex-basis: 100%;
+  .text-job-desc {
+    font-size: 24px;
   }
 
-  .side-bar {
-    display: none;
+  .more-info-item-magang span {
+    font-size: 12px;
   }
-
 }
