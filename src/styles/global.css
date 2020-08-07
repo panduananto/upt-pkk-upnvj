@@ -73,8 +73,9 @@ nav ul li a:hover::after {
 
 .navbar-toggle {
   display: none;
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
+  transform: scale(0.7);
 }
 
 .page-nav {
@@ -116,16 +117,6 @@ nav ul li a:hover::after {
   width: 100%;
 }
 
-.footer-sosial-media-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #6351ce;
-  padding: 30px 25px;
-  width: 100%;
-}
-
 .sosial-media-connect-text {
   color: white;
   font-weight: 400;
@@ -134,28 +125,25 @@ nav ul li a:hover::after {
 .sosial-media-icon-container {
   display: flex;
   height: 25px;
-  width: 300px;
+  width: 80px;
 }
 
-.icon-sosial-media path {
-  fill: white;
-}
-
-.icon-sosial-media path:hover {
-  fill: #e2e8f0;
+.icon-sosial-media:hover {
+  transform: scale(1.1);
 }
 
 .footer-detail {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: #1c2331;
   height: 100%;
   padding: 40px 25px;
 }
 
 .footer-detail-item {
-  margin: 0 15px;
-  width: 33.33%;
+  margin: 15px 0;
 }
 
 .footer-detail-item .title-footer-detail {
@@ -170,14 +158,22 @@ nav ul li a:hover::after {
 
 .footer-detail-item p {
   color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
 }
 
 .footer-detail-item ul {
+  display: flex;
+  flex-direction: row;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
   list-style-type: none;
 }
 
 .footer-detail-item li {
-  margin-bottom: 20px;
+  margin: 0 10px;
 }
 
 .footer-detail-item li a {
@@ -189,6 +185,38 @@ nav ul li a:hover::after {
   font-weight: 600;
 }
 
+.image-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-footer img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 70px;
+  width: 70px;
+}
+
+.image-footer .image-footer-caption {
+  margin-left: 10px;
+}
+
+.image-footer .image-footer-caption h3 {
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+}
+
+.image-footer .image-footer-caption h5 {
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+}
+
 .contact-footer span {
   color: white;
   vertical-align: middle;
@@ -196,7 +224,6 @@ nav ul li a:hover::after {
 
 .contact-footer svg {
   height: 25px;
-  margin-right: 15px;
   vertical-align: middle;
   width: 25px;
 }
@@ -287,15 +314,55 @@ nav ul li a:hover::after {
   }
 
   .navbar-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     cursor: pointer;
-    display: inline-block;
     position: absolute;
     right: 20px;
-    top: 35px;
+    top: 45px;
+  }
+
+  .line {
+    width: 40px;
+    height: 3px;
+    background: white;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .line:nth-child(1) {
+    transform-origin: 0 0;
+  }
+
+  .line:last-child {
+    transform-origin: 0 100%;
   }
 
   .active {
     display: block;
+  }
+
+  .navbar-toggle.open .line:nth-child(1) {
+    transform: rotate(45deg) translate(-1px, 0px);
+  }
+
+  .navbar-toggle.open .line:nth-child(2) {
+    transform: scale(0);
+  }
+
+  .navbar-toggle.open .line:last-child {
+    transform: rotate(-45deg) translate(-1px, -1px);
+  }
+
+  .footer-detail-item ul {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-detail-item li {
+    margin: 0 0 10px 0;
   }
 }
 
@@ -319,7 +386,6 @@ nav ul li a:hover::after {
   .footer-detail-item {
     margin: 15px 15px;
     text-align: center;
-    width: 100%;
   }
 
   .footer-detail-item .title-footer-detail {
@@ -340,10 +406,6 @@ nav ul li a:hover::after {
     list-style-type: none;
   }
 
-  .footer-detail-item li {
-    margin-bottom: 20px;
-  }
-
   .footer-detail-item li a {
     color: white;
     text-decoration: none;
@@ -356,7 +418,6 @@ nav ul li a:hover::after {
 
   .contact-footer svg {
     height: 25px;
-    margin-right: 15px;
     vertical-align: middle;
     width: 25px;
   }

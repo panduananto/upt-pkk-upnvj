@@ -3,6 +3,7 @@ const navbarToggler = document.getElementById("navbar-toggler");
 
 const toggleNavbar = () => {
   mainNav.classList.toggle("active");
+  navbarToggler.classList.toggle("open");
 };
 
 navbarToggler.addEventListener("click", toggleNavbar);
