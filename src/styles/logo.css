@@ -1,0 +1,21 @@
+@import "global.css";
+
+.perusahaan-wrappers{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5px;
+  }
+  
+  .perusahaan{
+    display: flex;
+    width: 15%;
+    height: 10%;
+  }
+  .perusahaan-wrappers .perusahaan {
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 10px;
+  
+    position: relative;
+  }
+  
