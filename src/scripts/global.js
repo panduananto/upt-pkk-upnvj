@@ -8,6 +8,29 @@ const toggleNavbar = () => {
 
 navbarToggler.addEventListener("click", toggleNavbar);
 
+const handleDropDownClick = (dropDownItem) => {
+  dropDownItem.classList.add("current");
+  dropDownItem.nextElementSibling.classList.toggle("show-drop-down");
+};
+
+const handleCloseOtherDropDown = (otherDropDownItem) => {
+  document.querySelectorAll(".show-drop-down").forEach((dropDown) => {
+    if (otherDropDownItem !== dropDown) {
+      dropDown.previousElementSibling.classList.remove("current");
+      dropDown.classList.remove("show-drop-down");
+    }
+  });
+};
+
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("drop-down-menu")) {
+    handleCloseOtherDropDown(e.target);
+    handleDropDownClick(e.target);
+  } else {
+    handleCloseOtherDropDown(null);
+  }
+});
+
 const pageArray = [
   "sejarah.html",
   "visimisi.html",
