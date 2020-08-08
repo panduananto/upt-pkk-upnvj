@@ -31,6 +31,26 @@ document.addEventListener("click", (e) => {
   }
 });
 
+const logoKerjasamaContainer = document.querySelector(".logo-container");
+
+fetch("../logo/logo.html")
+  .then((res) => {
+    if (res.status !== 404) {
+      return res.text();
+    } else {
+      return fetch("./logo/logo.html")
+        .then((res) => {
+          return res.text();
+        })
+        .then((html) => {
+          return (logoKerjasamaContainer.innerHTML = html);
+        });
+    }
+  })
+  .then((html) => {
+    return (logoKerjasamaContainer.innerHTML = html);
+  });
+
 const pageArray = [
   "sejarah.html",
   "visimisi.html",

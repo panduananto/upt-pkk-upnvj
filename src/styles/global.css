@@ -136,6 +136,25 @@ nav ul li ul li a {
   text-decoration: none;
 }
 
+.perusahaan-container h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  text-align: center;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px 0 70px 0;
+  padding: 0 50px;
+}
+
+.logo-item {
+  margin: 10px 10px;
+}
+
 .previous {
   justify-content: flex-end;
 }
@@ -412,6 +431,10 @@ nav ul li ul li a {
 }
 
 @media screen and (max-width: 640px) {
+  .logo-container {
+    padding: 0;
+  }
+
   .footer-sosial-media-container {
     flex-direction: column;
     padding: 30px 0;
