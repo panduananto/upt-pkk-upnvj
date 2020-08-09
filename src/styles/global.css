@@ -25,12 +25,29 @@ nav {
   z-index: 1;
 }
 
-nav span img {
+.container-main-logo {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.container-main-logo span img {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 70px;
-  width: 70px;
+  height: 60px;
+  width: 60px;
+}
+
+.main-logo-caption {
+  margin-left: 10px;
+  text-align: left;
+}
+
+.main-logo-caption h3 {
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
 }
 
 nav ul {
@@ -41,7 +58,7 @@ nav ul {
 }
 
 nav ul li {
-  margin: 0 25px;
+  margin: 0 15px;
   position: relative;
 }
 

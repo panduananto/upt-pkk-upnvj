@@ -14,10 +14,13 @@ const prevSlideButton = document.querySelector("#prevSlideButton");
 const nextSlideButton = document.querySelector("#nextSlideButton");
 
 let imageCounter = 1;
-const imageWidth = carouselImages[0].clientWidth;
+let imageWidth = carouselImages[0].clientWidth;
 
-carouselSlide.style.transform =
-  "translateX(" + -imageWidth * imageCounter + "px)";
+window.addEventListener("resize", () => {
+  imageWidth = carouselImages[0].clientWidth;
+  carouselSlide.style.transform =
+    "translateX(" + -imageWidth * imageCounter + "px)";
+});
 
 nextSlideButton.addEventListener("click", () => {
   if (imageCounter >= carouselImages.length - 1) return;

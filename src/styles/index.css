@@ -115,6 +115,12 @@
   margin-bottom: 30px;
 }
 
+.topik-utama-container h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+
 .topik-utama-container .item-card-row {
   display: flex;
   flex-direction: row;
@@ -186,13 +192,18 @@
     width: 100%;
   }
 
+  .topik-utama-container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
   .topik-utama-container .item-card-row {
     flex-direction: column;
     justify-content: space-evenly;
   }
 
   .topik-utama-container .item-card-column {
-    margin: 20px 0;
+    margin: 0;
     width: 90%;
   }
 }
