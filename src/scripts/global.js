@@ -34,7 +34,6 @@ const handleCloseOtherDropDown = (otherDropDownItem) => {
 
 document.addEventListener("click", (e) => {
   if (e.target.classList.contains("navbar-toggle")) {
-    console.log("click");
     e.target.classList.toggle("open");
     e.target.previousElementSibling.classList.toggle("active");
   }
