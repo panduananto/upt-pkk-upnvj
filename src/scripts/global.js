@@ -1,12 +1,22 @@
-const mainNav = document.getElementById("navbar-menu");
-const navbarToggler = document.getElementById("navbar-toggler");
+const navbarContainer = document.querySelector("nav");
 
-const toggleNavbar = () => {
-  mainNav.classList.toggle("active");
-  navbarToggler.classList.toggle("open");
-};
-
-navbarToggler.addEventListener("click", toggleNavbar);
+fetch("./header-footer/header-index.html")
+  .then((res) => {
+    if (res.status !== 404) {
+      return res.text();
+    } else {
+      return fetch("../header-footer/header-other-pages.html")
+        .then((res) => {
+          return res.text();
+        })
+        .then((html) => {
+          return (navbarContainer.innerHTML = html);
+        });
+    }
+  })
+  .then((html) => {
+    return (navbarContainer.innerHTML = html);
+  });
 
 const handleDropDownClick = (dropDownItem) => {
   dropDownItem.classList.add("current");
@@ -23,6 +33,12 @@ const handleCloseOtherDropDown = (otherDropDownItem) => {
 };
 
 document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("navbar-menu")) {
+    e.target.classList.toggle("active");
+  }
+  if (e.target.classList.contains("navbar-toggler")) {
+    e.target.classList.toggle("open");
+  }
   if (e.target.classList.contains("drop-down-menu")) {
     handleCloseOtherDropDown(e.target);
     handleDropDownClick(e.target);
@@ -105,3 +121,23 @@ if (pageArray.includes(lastSegmentOfUrl)) {
     );
   }
 }
+
+const mainFooter = document.querySelector(".footer");
+
+fetch("../header-footer/footer.html")
+  .then((res) => {
+    if (res.status !== 404) {
+      return res.text();
+    } else {
+      return fetch("./header-footer/footer.html")
+        .then((res) => {
+          return res.text();
+        })
+        .then((html) => {
+          return (mainFooter.innerHTML = html);
+        });
+    }
+  })
+  .then((html) => {
+    return (mainFooter.innerHTML = html);
+  });

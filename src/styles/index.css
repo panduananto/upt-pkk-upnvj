@@ -16,6 +16,7 @@
 }
 
 .carousel-container span svg {
+  cursor: pointer;
   height: 100px;
   width: 100px;
 }
