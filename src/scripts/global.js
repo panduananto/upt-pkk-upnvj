@@ -33,11 +33,10 @@ const handleCloseOtherDropDown = (otherDropDownItem) => {
 };
 
 document.addEventListener("click", (e) => {
-  if (e.target.classList.contains("navbar-menu")) {
-    e.target.classList.toggle("active");
-  }
-  if (e.target.classList.contains("navbar-toggler")) {
+  if (e.target.classList.contains("navbar-toggle")) {
+    console.log("click");
     e.target.classList.toggle("open");
+    e.target.previousElementSibling.classList.toggle("active");
   }
   if (e.target.classList.contains("drop-down-menu")) {
     handleCloseOtherDropDown(e.target);
@@ -122,7 +121,7 @@ if (pageArray.includes(lastSegmentOfUrl)) {
   }
 }
 
-const mainFooter = document.querySelector(".footer");
+const mainFooter = document.querySelector("footer");
 
 fetch("../header-footer/footer.html")
   .then((res) => {

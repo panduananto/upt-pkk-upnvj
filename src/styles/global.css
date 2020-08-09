@@ -180,10 +180,6 @@ nav ul li ul li a {
   justify-content: flex-start;
 }
 
-.footer {
-  width: 100%;
-}
-
 .sosial-media-connect-text {
   color: white;
   font-weight: 400;
@@ -191,8 +187,18 @@ nav ul li ul li a {
 
 .sosial-media-icon-container {
   display: flex;
-  height: 25px;
-  width: 80px;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100px;
+}
+
+.sosial-media-icon-container img {
+  height: 30px;
+  width: 30px;
+}
+
+.sosial-media-icon-container a:hover {
+  transform: scale(1.1);
 }
 
 .icon-sosial-media:hover {
@@ -293,16 +299,6 @@ nav ul li ul li a {
   height: 25px;
   vertical-align: middle;
   width: 25px;
-}
-
-.footer .footer-copyrights {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #161c27;
-  color: white;
-  height: 80px;
-  width: 100%;
 }
 
 .button-group {
