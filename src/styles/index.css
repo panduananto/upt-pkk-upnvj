@@ -124,6 +124,7 @@
 .topik-utama-container .item-card-row {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
   margin: 0 -15px;
@@ -133,13 +134,14 @@
   background-color: white;
   border-radius: 10px;
   box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.2);
-  margin: 0 15px;
-  width: 33.33%;
+  margin: 15px 15px;
+  flex-basis: 30%;
+  flex-grow: 1;
 }
 
 .topik-utama-container .item-card-image {
   border-radius: 10px 10px 0 0;
-  height: 50%;
+  height: 300px;
   position: relative;
   overflow: hidden;
 }
@@ -198,18 +200,21 @@
   }
 
   .topik-utama-container .item-card-row {
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-evenly;
   }
 
   .topik-utama-container .item-card-column {
-    margin: 0;
-    width: 90%;
+    flex-basis: 45%;
   }
 }
 
 @media screen and (max-width: 640px) {
   .home-header-detail h1 {
     font-size: 40px;
+  }
+
+  .topik-utama-container .item-card-row {
+    flex-direction: column;
   }
 }
