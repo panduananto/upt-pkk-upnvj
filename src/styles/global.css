@@ -503,4 +503,8 @@ nav ul li ul li a {
     vertical-align: middle;
     width: 25px;
   }
+
+  .button-group {
+    justify-content: center;
+  }
 }

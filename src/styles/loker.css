@@ -76,34 +76,38 @@
   flex-direction: column;
   flex-basis: 75%;
   justify-content: center;
+  align-items: center;
 }
 
 .info-magang-container h3 {
   font-family: "Montserrat", sans-serif;
+  font-size: 30px;
   margin-bottom: 30px;
-  text-align: left;
+  align-self: flex-start;
 }
 
 .info-magang-container .card-magang-row {
   display: flex;
+  flex-basis: 100%;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
   margin: 0 -15px;
-  width: 100%;
 }
 
 .info-magang-container .card-magang-column {
+  flex-basis: 45%;
+  flex-grow: 1;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.2);
   margin: 0 15px 40px 15px;
-  width: 50%;
 }
 
 .info-magang-container .image-magang {
   border-radius: 10px 10px 0 0;
-  height: 50%;
+  height: 250px;
   position: relative;
   overflow: hidden;
 }
@@ -210,5 +214,9 @@
 
   .more-info-item-magang span {
     font-size: 12px;
+  }
+
+  .info-magang-container h3 {
+    font-size: 24px;
   }
 }
