@@ -175,6 +175,34 @@
 .item-card-text a:hover {
   color: #161c27;
 }
+.footer-sosial-media-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #6351CE;
+  padding: 30px 25px;
+  width: 100%;
+}
+
+.sosial-media-connect-text {
+  color: white;
+  font-weight: 400;
+}
+
+.sosial-media-icon-container {
+  display: flex;
+  height: 25px;
+  width: 300px;
+}
+
+.icon-sosial-media path {
+  fill: white;
+}
+
+.icon-sosial-media path:hover {
+  fill: #e2e8f0;
+}
 
 /* Responsive breakpoint */
 
