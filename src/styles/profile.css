@@ -10,7 +10,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 200px;
-  padding:25px 25px;
+  padding: 25px 25px;
   position: relative;
   z-index: 0;
 }
@@ -50,7 +50,7 @@
 
 .side-bar {
   flex-basis: 20%;
-  background-color: #6351CE;
+  background-color: #6351ce;
   height: fit-content;
 }
 
@@ -106,20 +106,18 @@
 /* Respopnsive breakpoint */
 
 @media screen and (max-width: 1024px) {
-
-}
-
-@media screen and (max-width: 640px) {
   .content-container {
-    padding: 40px 20px;
-  }
-
-  .article {
-    flex-basis: 100%;
+    flex-direction: column;
+    padding: 40px 40px;
   }
 
   .side-bar {
-    display: none;
+    margin-bottom: 30px;
   }
+}
 
+@media screen and (max-width: 640px) {
+  .article {
+    flex-basis: 100%;
+  }
 }

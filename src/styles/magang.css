@@ -79,6 +79,13 @@
   align-items: center;
 }
 
+.info-magang-container h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  margin-bottom: 30px;
+  align-self: flex-start;
+}
+
 .info-magang-container .card-magang-row {
   display: flex;
   flex-basis: 100%;
@@ -310,10 +317,6 @@ input#file {
     flex-direction: row;
   }
 
-  .info-magang-container .card-magang-column {
-    width: 100%;
-  }
-
   .more-info-item-magang {
     padding: 15px 15px;
   }
@@ -330,6 +333,10 @@ input#file {
 }
 
 @media screen and (max-width: 640px) {
+  .info-magang-container {
+    flex-basis: 100%;
+  }
+
   .info-magang-container .card-magang-row {
     flex-direction: column;
   }
@@ -343,6 +350,10 @@ input#file {
   }
   
   .daftar-magang-container h3 {
+    font-size: 24px;
+  }
+
+  .info-magang-container h3 {
     font-size: 24px;
   }
 }

@@ -183,10 +183,6 @@
   .info-magang-container .card-magang-row {
     flex-direction: row;
   }
-  
-  .info-magang-container .card-magang-column {
-    width: 100%;
-  }
 
   .more-info-item-magang {
     padding: 15px 15px;
