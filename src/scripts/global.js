@@ -52,7 +52,7 @@ const handleCloseOtherDropDown = (otherDropDownItem) => {
   });
 };
 
-document.addEventListener("click", (e) => {
+document.addEventListener("mouseover", (e) => {
   if (e.target.classList.contains("navbar-toggle")) {
     e.target.classList.toggle("open");
     e.target.previousElementSibling.classList.toggle("active");
