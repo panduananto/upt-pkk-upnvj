@@ -1,4 +1,4 @@
-const searchBarContainer = document.querySelector(".search-container")
+const searchBarContainer = document.querySelector(".search-container");
 
 fetch("./header-footer/search-bar.html")
   .then((res) => {
@@ -36,11 +36,31 @@ fetch("./header-footer/header-index.html")
   })
   .then((html) => {
     return (navbarContainer.innerHTML = html);
+  })
+  .then(() => {
+    const navbarMenuElement = document.querySelectorAll("#navbar-menu > li");
+    navbarMenuElement.forEach((item) => {
+      item.addEventListener("mouseenter", (e) => {
+        console.log(e);
+        if (e.target.firstElementChild.className === "drop-down-menu") {
+          handleCloseOtherDropDown(e.target.firstElementChild);
+          handleDropDownClick(e.target.firstElementChild);
+        }
+      });
+
+      item.addEventListener("mouseleave", () => {
+        handleCloseOtherDropDown(null);
+      });
+    });
   });
 
 const handleDropDownClick = (dropDownItem) => {
   dropDownItem.classList.add("current");
-  dropDownItem.nextElementSibling.classList.toggle("show-drop-down");
+  dropDownItem.nextElementSibling.classList.add("show-drop-down");
+};
+
+const subMenuDropDown = (dropDownItem) => {
+  dropDownItem.classList.add("show-drop-down");
 };
 
 const handleCloseOtherDropDown = (otherDropDownItem) => {
@@ -52,38 +72,12 @@ const handleCloseOtherDropDown = (otherDropDownItem) => {
   });
 };
 
-document.addEventListener("mouseover", (e) => {
+document.addEventListener("click", (e) => {
   if (e.target.classList.contains("navbar-toggle")) {
     e.target.classList.toggle("open");
     e.target.previousElementSibling.classList.toggle("active");
   }
-  if (e.target.classList.contains("drop-down-menu")) {
-    handleCloseOtherDropDown(e.target);
-    handleDropDownClick(e.target);
-  } else {
-    handleCloseOtherDropDown(null);
-  }
 });
-
-// const logoKerjasamaContainer = document.querySelector(".logo-container");
-
-// fetch("../logo/logo.html")
-//   .then((res) => {
-//     if (res.status !== 404) {
-//       return res.text();
-//     } else {
-//       return fetch("./logo/logo.html")
-//         .then((res) => {
-//           return res.text();
-//         })
-//         .then((html) => {
-//           return (logoKerjasamaContainer.innerHTML = html);
-//         });
-//     }
-//   })
-//   .then((html) => {
-//     return (logoKerjasamaContainer.innerHTML = html);
-//   });
 
 // const pageArray = [
 //   "sejarah.html",

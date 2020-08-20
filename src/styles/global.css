@@ -1,10 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600;700&family=Roboto:wght@100;300;400;500;700&display=swap");
 
+:root {
+  --primaryColor: #6351ce;
+  --primaryColorLight: #5a67d8;
+  --mainWhite: #ffffff;
+  --mainGray: #cbd5e0;
+  --grayLight: #edf2f7;
+  --mainBlack: #161c27;
+  --blackLight: #202838;
+  --mainMargin: 16px;
+  --mainTransition: all 0.2s ease-in-out;
+}
+
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  border: 0 solid #d2d6dc;
+  box-sizing: border-box;
+  border: 0 solid var(--mainGray);
 }
 
 html {
@@ -12,6 +24,8 @@ html {
 }
 
 body {
+  color: var(--mainBlack);
+  background: var(--mainWhite);
   font-family: "Open Sans", sans-serif;
 }
 
@@ -20,16 +34,16 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
-  background-color: #f7fafc;
+  background-color: var(--grayLight);
   height: 70px;
-  padding: 15px;
+  padding: var(--mainMargin);
 }
 
 .search-container span:hover {
-  background-color: #161c27;
+  background-color: var(--mainBlack);
   padding: 2px 10px;
   fill: #ffffff;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .search-container ul {
@@ -41,12 +55,12 @@ body {
 
 .search-container ul li {
   cursor: pointer;
-  margin: 0 15px;
+  margin: 0 var(--mainMargin);
   position: relative;
 }
 
 .search-container ul li a {
-  color: #161c27;
+  color: var(--mainBlack);
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
   transition: opacity 200ms ease-in-out;
@@ -54,7 +68,7 @@ body {
 }
 
 .search-container ul li a::after {
-  background-color: #6351ce;
+  background-color: var(--primaryColor);
   border-radius: 3px;
   content: "";
   display: block;
@@ -76,8 +90,8 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #161c27;
-  padding: 15px;
+  background-color: var(--mainBlack);
+  padding: var(--mainMargin);
   position: sticky;
   top: 0;
   z-index: 1;
@@ -107,8 +121,7 @@ nav a {
 }
 
 .main-logo-caption h3 {
-  color: #ffffff;
-  font-family: "Montserrat", sans-serif;
+  color: var(--mainWhite);
   font-size: 12px;
 }
 
@@ -121,27 +134,29 @@ nav ul {
 
 nav ul li {
   cursor: pointer;
-  margin: 0 15px;
+  margin: 0 var(--mainMargin);
   position: relative;
 }
 
 nav ul li a {
   color: white;
-  font-family: "Montserrat", sans-serif;
   text-decoration: none;
   transition: opacity 200ms ease-in-out;
   overflow: hidden;
+  padding: 5px;
 }
 
 nav ul li a::after {
-  background-color: #6351ce;
+  background-color: var(--primaryColor);
   border-radius: 3px;
   content: "";
   display: block;
-  height: 3px;
-  margin-top: 3px;
+  height: 25px;
+  position: absolute;
+  top: 0;
   transition: width 0.2s ease-in-out;
   width: 0%;
+  z-index: -1;
 }
 
 nav ul li a.current::after {
@@ -159,61 +174,57 @@ nav ul li a:hover::after {
   transform: scale(0.7);
 }
 
-nav ul li ul {
-  display: none;
+nav ul li .sub-menu {
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
-  background-color: #202838;
+  background-color: var(--blackLight);
   position: absolute;
-  left: -10px;
-  top: 40px;
+  top: 24px;
   border-radius: 5px;
   padding: 20px;
+  visibility: hidden;
   z-index: 6;
 }
 
-nav ul li:last-child > ul {
-  left: -150px;
-}
-
-.show-drop-down {
+nav ul li .sub-menu ul {
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-nav ul li ul li {
+nav ul li > .sub-menu {
+  left: -35px;
+}
+
+nav ul li .sub-menu.show-drop-down {
+  visibility: visible;
+}
+
+nav ul li .sub-menu li {
   margin: 0;
   width: 180px;
 }
 
-nav ul li ul li a {
+nav ul li .sub-menu li a {
   display: inline-block;
+  padding: 0;
 }
 
-.page-nav {
-  display: flex;
-  flex-direction: row;
+nav ul li .sub-menu ul li a::after {
+  background-color: var(--primaryColor);
+  border-radius: 3px;
+  content: "";
+  display: block;
+  height: 3px;
+  margin-top: 3px;
+  position: relative;
+  transition: width 0.2s ease-in-out;
+  width: 0%;
 }
 
-.page-nav .button-page {
-  display: flex;
-  align-items: center;
-  flex-basis: 50%;
-  background-color: #4a5568;
-  height: 250px;
-  padding: 0 25px;
-}
-
-.button-page:hover {
-  background-color: #1a202c;
-  padding: 50px;
-  transition: 0.2s ease-in-out;
-}
-
-.button-page a {
-  color: white;
-  font-size: 18px;
-  font-weight: 600;
-  text-decoration: none;
+nav ul li .sub-menu li a:hover::after {
+  width: 100%;
 }
 
 .perusahaan-container h3 {
@@ -248,7 +259,7 @@ nav ul li ul li a {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: #6351ce;
+  background-color: var(--primaryColor);
   padding: 30px 25px;
   width: 100%;
 }
@@ -310,7 +321,7 @@ nav ul li ul li a {
 }
 
 .footer-detail-item .title-footer-detail {
-  border-bottom: 3px solid #6351ce;
+  border-bottom: 3px solid var(--primaryColor);
   display: inline-block;
   color: white;
   font-size: 20px;
@@ -369,12 +380,12 @@ nav ul li ul li a {
 }
 
 .image-footer .image-footer-caption h3 {
-  color: #ffffff;
+  color: var(--mainWhite);
   font-family: "Montserrat", sans-serif;
 }
 
 .image-footer .image-footer-caption h5 {
-  color: #ffffff;
+  color: var(--mainWhite);
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -382,7 +393,7 @@ nav ul li ul li a {
 }
 
 .contact-footer span {
-  color: white;
+  color: var(--mainWhite);
   vertical-align: middle;
 }
 
@@ -404,7 +415,7 @@ nav ul li ul li a {
 .btn-primary {
   border: none;
   border-radius: 5px;
-  background-color: #6351ce;
+  background-color: var(--primaryColor);
   padding: 16px;
 }
 
@@ -418,7 +429,7 @@ nav ul li ul li a {
 }
 
 .btn-primary span {
-  color: #ffffff;
+  color: var(--mainWhite);
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   font-weight: 600;
@@ -426,10 +437,10 @@ nav ul li ul li a {
 }
 
 .btn-secondary {
-  background-color: #ffffff;
-  border: 1px solid #bdbdbd;
+  background-color: var(--mainWhite);
+  border: 1px solid var(--grayLight);
   border-radius: 5px;
-  padding: 16px;
+  padding: var(--mainMargin);
 }
 
 .btn-secondary:hover {
@@ -437,7 +448,7 @@ nav ul li ul li a {
 }
 
 .btn-secondary span {
-  color: #1a202c;
+  color: var(--mainBlack);
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   letter-spacing: 2px;
@@ -460,29 +471,35 @@ nav ul li ul li a {
     margin-right: auto;
   }
 
-  nav li {
+  nav ul li {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 10px 0;
+    margin: var(--mainMargin);
   }
 
-  nav li a {
+  nav ul li a {
+    padding: 0;
     margin-left: 0;
+    position: relative;
   }
 
-  nav ul li ul {
+  nav ul li a::after {
+    position: absolute;
+  }
+
+  nav ul li .sub-menu {
     align-items: center;
     left: 0;
     width: 100%;
   }
 
-  nav ul li:last-child > ul {
-    left: 0;
+  nav ul li > .sub-menu {
+    left: 0px;
   }
 
-  nav ul li ul li {
+  nav ul li .sub-menu li {
     padding: 5px 0;
   }
 
@@ -500,7 +517,7 @@ nav ul li ul li a {
   .line {
     width: 40px;
     height: 3px;
-    background: white;
+    background:var(--mainWhite);
     transition: all 0.5s ease-in-out;
   }
 
@@ -570,7 +587,7 @@ nav ul li ul li a {
   }
 
   .footer-detail-item .title-footer-detail {
-    border-bottom: 3px solid #6351ce;
+    border-bottom: 3px solid var(--primaryColor);
     display: inline-block;
     color: white;
     font-size: 20px;
