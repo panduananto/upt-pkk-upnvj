@@ -14,7 +14,13 @@
     <a href="../index.html">Home</a>
   </li>
   <li>
-    <a class="drop-down-menu" href="./profile/sejarah.html">Profile</a>
+    <a class="drop-down-menu" href="../profile/sejarah.html">Profile</a>
+    <span>
+      <svg class="expand-sub-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff">
+        <path d="M0 0h24v24H0z" fill="none" />
+        <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
+      </svg>
+    </span>
     <div class="sub-menu">
       <ul>
         <li>
@@ -39,7 +45,13 @@
     </div>
   </li>
   <li>
-    <a class="drop-down-menu" href="./kerjasama/bumn.html">Kerjasama</a>
+    <a class="drop-down-menu" href="../kerjasama/bumn.html">Kerjasama</a>
+    <span>
+      <svg class="expand-sub-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff">
+        <path d="M0 0h24v24H0z" fill="none" />
+        <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
+      </svg>
+    </span>
     <div class="sub-menu">
       <ul>
         <li>
@@ -55,7 +67,13 @@
     </div>
   </li>
   <li>
-    <a class="drop-down-menu" href="./event/kewirausahaan.html">Event</a>
+    <a class="drop-down-menu" href="../event/kewirausahaan.html">Event</a>
+    <span>
+      <svg class="expand-sub-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff">
+        <path d="M0 0h24v24H0z" fill="none" />
+        <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
+      </svg>
+    </span>
     <div class="sub-menu">
       <ul>
         <li>
@@ -74,7 +92,13 @@
     </div>
   </li>
   <li>
-    <a class="drop-down-menu" href="./loker/lokerbumn.html">Loker</a>
+    <a class="drop-down-menu" href="../loker/lokerbumn.html">Loker</a>
+    <span>
+      <svg class="expand-sub-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff">
+        <path d="M0 0h24v24H0z" fill="none" />
+        <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
+      </svg>
+    </span>
     <div class="sub-menu">
       <ul>
         <li>
@@ -87,7 +111,13 @@
     </div>
   </li>
   <li>
-    <a class="drop-down-menu" href="./magang/infomagang.html">Magang</a>
+    <a class="drop-down-menu" href="../magang/infomagang.html">Magang</a>
+    <span>
+      <svg class="expand-sub-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff">
+        <path d="M0 0h24v24H0z" fill="none" />
+        <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
+      </svg>
+    </span>
     <div class="sub-menu">
       <ul>
         <li>

@@ -20,12 +20,12 @@ fetch("./header-footer/search-bar.html")
 
 const navbarContainer = document.querySelector("nav");
 
-fetch("./header-footer/header-index.html")
+fetch("./header-footer/header-index.xml")
   .then((res) => {
     if (res.status !== 404) {
       return res.text();
     } else {
-      return fetch("../header-footer/header-other-pages.html")
+      return fetch("../header-footer/header-other-pages.xml")
         .then((res) => {
           return res.text();
         })
@@ -41,8 +41,10 @@ fetch("./header-footer/header-index.html")
     const navbarMenuElement = document.querySelectorAll("#navbar-menu > li");
     navbarMenuElement.forEach((item) => {
       item.addEventListener("mouseenter", (e) => {
-        console.log(e);
-        if (e.target.firstElementChild.className === "drop-down-menu") {
+        if (
+          e.target.firstElementChild.className === "drop-down-menu" ||
+          e.target.className === "expand-sub-menu"
+        ) {
           handleCloseOtherDropDown(e.target.firstElementChild);
           handleDropDownClick(e.target.firstElementChild);
         }
@@ -51,12 +53,23 @@ fetch("./header-footer/header-index.html")
       item.addEventListener("mouseleave", () => {
         handleCloseOtherDropDown(null);
       });
+
+      item.addEventListener("touchstart", (e) => {
+        if (e.target.classList.contains("expand-sub-menu")) {
+          handleCloseOtherDropDown(e.target);
+          handleDropDownClick(e.target);
+        }
+        if (e.target.firstElementChild.className === "drop-down-menu") {
+          handleCloseOtherDropDown(e.target.firstElementChild);
+          handleDropDownClick(e.target.firstElementChild);
+        }
+      });
     });
   });
 
 const handleDropDownClick = (dropDownItem) => {
   dropDownItem.classList.add("current");
-  dropDownItem.nextElementSibling.classList.add("show-drop-down");
+  dropDownItem.parentElement.lastElementChild.classList.add("show-drop-down");
 };
 
 const subMenuDropDown = (dropDownItem) => {
@@ -66,7 +79,7 @@ const subMenuDropDown = (dropDownItem) => {
 const handleCloseOtherDropDown = (otherDropDownItem) => {
   document.querySelectorAll(".show-drop-down").forEach((dropDown) => {
     if (otherDropDownItem !== dropDown) {
-      dropDown.previousElementSibling.classList.remove("current");
+      dropDown.parentElement.firstElementChild.classList.remove("current");
       dropDown.classList.remove("show-drop-down");
     }
   });
@@ -136,12 +149,12 @@ document.addEventListener("click", (e) => {
 
 const mainFooter = document.querySelector("footer");
 
-fetch("../header-footer/footer.html")
+fetch("../header-footer/footer.xml")
   .then((res) => {
     if (res.status !== 404) {
       return res.text();
     } else {
-      return fetch("./header-footer/footer.html")
+      return fetch("./header-footer/footer.xml")
         .then((res) => {
           return res.text();
         })

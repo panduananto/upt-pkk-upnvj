@@ -1,3 +1,5 @@
+// excerpt on article description
+
 const excerpt = document.querySelectorAll("#excerpt");
 
 excerpt.forEach((element) => {
@@ -8,6 +10,8 @@ excerpt.forEach((element) => {
   }
 });
 
+// header image carousel
+
 const carouselSlide = document.querySelector(".carousel-slide");
 const carouselImages = document.querySelectorAll(".carousel-slide img");
 const prevSlideButton = document.querySelector("#prevSlideButton");
@@ -15,6 +19,32 @@ const nextSlideButton = document.querySelector("#nextSlideButton");
 
 let imageCounter = 1;
 let imageWidth = carouselImages[0].clientWidth;
+let touchstartX = 0;
+let touchendX = 0;
+
+function nextCarouselImage() {
+  if (imageCounter >= carouselImages.length - 1) return;
+  carouselSlide.style.transition = "transform 0.4s ease-in-out";
+  imageCounter++;
+  carouselSlide.style.transform =
+    "translateX(" + -imageWidth * imageCounter + "px)";
+}
+
+function handleSwipeCarouselGesture() {
+  if (touchendX > touchstartX) {
+    prevCarouselImage();
+  } else {
+    nextCarouselImage();
+  }
+}
+
+function prevCarouselImage() {
+  if (imageCounter <= 0) return;
+  carouselSlide.style.transition = "transform 0.4s ease-in-out";
+  imageCounter--;
+  carouselSlide.style.transform =
+    "translateX(" + -imageWidth * imageCounter + "px)";
+}
 
 window.addEventListener("resize", () => {
   imageWidth = carouselImages[0].clientWidth;
@@ -23,19 +53,22 @@ window.addEventListener("resize", () => {
 });
 
 nextSlideButton.addEventListener("click", () => {
-  if (imageCounter >= carouselImages.length - 1) return;
-  carouselSlide.style.transition = "transform 0.4s ease-in-out";
-  imageCounter++;
-  carouselSlide.style.transform =
-    "translateX(" + -imageWidth * imageCounter + "px)";
+  nextCarouselImage();
 });
 
 prevSlideButton.addEventListener("click", () => {
-  if (imageCounter <= 0) return;
-  carouselSlide.style.transition = "transform 0.4s ease-in-out";
-  imageCounter--;
-  carouselSlide.style.transform =
-    "translateX(" + -imageWidth * imageCounter + "px)";
+  prevCarouselImage();
+});
+
+carouselImages.forEach((item) => {
+  item.addEventListener("touchstart", (e) => {
+    touchstartX = e.changedTouches[0].screenX;
+  });
+
+  item.addEventListener("touchend", (e) => {
+    touchendX = e.changedTouches[0].screenX;
+    handleSwipeCarouselGesture();
+  });
 });
 
 carouselSlide.addEventListener("transitionend", () => {
