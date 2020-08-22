@@ -85,3 +85,21 @@ carouselSlide.addEventListener("transitionend", () => {
       "translateX(" + -imageWidth * imageCounter + "px)";
   }
 });
+
+// mini slider with glide.js
+
+let kerjasamaSLider = new Glide(".glide", {
+  gap: 20,
+  type: "carousel",
+  perView: 4,
+  breakpoints: {
+    1024: {
+      perView: 3,
+    },
+    640: {
+      perView: 2,
+    },
+  },
+});
+
+kerjasamaSLider.mount();
