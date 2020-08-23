@@ -48,8 +48,14 @@
   padding: 40px 80px;
 }
 
+.content-inner-container {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+}
+
 .side-bar {
-  flex-basis: 20%;
+  width: 20%;
   background-color: #6351ce;
   height: fit-content;
 }
@@ -136,7 +142,7 @@
 .table-data-content-text-only {
   border-bottom-width: 1px;
   border-color: #edf2f7;
-  color: #4A5568;
+  color: #4a5568;
   font-family: "Open-Sans", sans-serif;
   font-size: 14px;
   letter-spacing: 0.3px;
@@ -144,6 +150,85 @@
   padding: 14px 16px;
   text-align: left;
   white-space: nowrap;
+}
+
+/* kerjasama detail page */
+
+.document-viewer-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.document-page-nav {
+  display: flex;
+  align-self: center;
+  flex-direction: row;
+  background-color: var(--primaryColor);
+  height: 50px;
+  width: 100%;
+}
+
+.btn-document-page {
+  background-color: var(--secondaryColor);
+  padding: 0;
+}
+
+.btn-document-page:focus {
+  outline: none;
+}
+
+.btn-document-page:hover {
+  background-color: var(--secondaryColorDark);
+}
+
+.btn-document-page svg {
+  width: 32px;
+  height: 32px;
+}
+
+.document-page-nav span {
+  align-self: center;
+  color: var(--mainWhite);
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.thumbnail-slider-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.featured-image-container {
+  height: 500px;
+  margin-bottom: 30px;
+}
+
+.featured-image-container img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.thumbnail-item {
+  height: 150px !important;
+}
+
+.thumbnail-item img {
+  object-fit: cover;
+  cursor: pointer;
+  height: 100%;
+  opacity: 0.7;
+  width: 100%;
+}
+
+.thumbnail-item img:hover {
+  opacity: 1;
+}
+
+.thumbnail-item img.active-to-featured {
+  opacity: 1;
 }
 
 /* Respopnsive breakpoint */
@@ -154,13 +239,18 @@
     padding: 40px 20px;
   }
 
+  .content-inner-container {
+    width: 100%;
+  }
+
   .side-bar {
     margin-bottom: 30px;
+    width: 100%;
   }
 }
 
 @media screen and (max-width: 640px) {
-  .article {
-    flex-basis: 100%;
+  .featured-image-container {
+    height: 300px;
   }
 }

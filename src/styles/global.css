@@ -3,6 +3,9 @@
 :root {
   --primaryColor: #6351ce;
   --primaryColorLight: #5a67d8;
+  --secondaryColorDark: #c51162;
+  --secondaryColor: #f50057;
+  --secondaryColorLight: #ec407a;
   --mainWhite: #ffffff;
   --mainGray: #cbd5e0;
   --grayLight: #edf2f7;
@@ -426,7 +429,11 @@ nav ul li .sub-menu li a:hover::after {
   border: none;
   border-radius: 5px;
   background-color: var(--primaryColor);
-  padding: 16px;
+  padding: var(--mainMargin);
+}
+
+.btn-primary:focus {
+  outline: none;
 }
 
 .btn-primary:hover {

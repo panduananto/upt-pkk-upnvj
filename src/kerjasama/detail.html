@@ -4,10 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      Sejarah - UPT Pengembangan Karir dan Kewirausahaan | Universitas
-      Pembangunan Nasional Veteran Jakarta
+      Informasi Perushaaan - UPT Pengembangan Karir dan Kewirausahaan |
+      Universitas Pembangunan Nasional Veteran Jakarta
     </title>
-    <link rel="stylesheet" href="../styles/profile.css" />
+    <link rel="stylesheet" href="../styles/kerjasama.css" />
+    <link rel="stylesheet" href="../styles/glide.core.min.css" />
+    <link rel="stylesheet" href="../styles/glide.theme.min.css" />
   </head>
 
   <body>
@@ -17,82 +19,65 @@
     <main>
       <section>
         <div class="nav-panel-container">
-          <h2>Sejarah</h2>
+          <h2>Informasi Perusahaan</h2>
         </div>
       </section>
       <section>
         <div class="content-container">
           <div class="side-bar">
             <ul>
-              <li><a href="./infomagang.html">Info Magang</a></li>
-              <li><a href="./pendaftaranmagang.html">Pendaftaran Magang</a></li>
-              <li><a href="./inputdatamagang.html">Insert Data Magang</a></li>
+              <li><a href="../kerjasama/bumn.html">BUMN</a></li>
+              <li><a href="../kerjasama/nonbumn.html">Non BUMN</a></li>
+              <li><a href="../kerjasama/umkm.html">UMKM</a></li>
             </ul>
           </div>
-          <div class="article">
-            <div class="article-main-image">
-              <img src="../assets/images/perusahaan-1.jpg" alt="" />
+          <div class="content-inner-container">
+            <div class="document-viewer-container">
+              <div class="document-page-nav"></div>
+              <iframe
+                id="pdf-doc-container"
+                src="#"
+                width="100%"
+                height="550px"
+              ></iframe>
             </div>
-            <div class="article-text">
-              <h3>
-                Application Developer
-              </h3>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos,
-                nemo, vel laudantium similique tempore quod maxime mollitia sit
-                odio voluptatibus minima reprehenderit iste quidem temporibus ad
-                ratione. Nobis, ad molestiae. Quos, earum suscipit perferendis
-                ipsa quasi sit fuga consequuntur porro libero, dignissimos
-                tempora similique asperiores nulla ratione quam corrupti. Beatae
-                temporibus inventore consectetur magnam autem rem, explicabo
-                praesentium sed maxime, error molestias reprehenderit nulla
-                perferendis, tenetur illum ipsa nemo soluta. Aliquam sunt
-                cupiditate non possimus quasi ipsam molestias vero corporis
-                blanditiis recusandae error quas aspernatur minus aut nesciunt
-                nam nihil ut, quae maxime minima, saepe adipisci eaque. A, eaque
-                reprehenderit.
-                <br />
-                <br />
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
-                commodi at porro ut? Assumenda, omnis, sapiente dolor aliquam
-                quaerat nesciunt minima deleniti minus, consectetur modi
-                praesentium ea nam debitis tenetur cupiditate ad quas voluptatem
-                molestiae laudantium beatae. Debitis, minima facere, numquam
-                iste, rerum culpa officia provident possimus cum quasi fuga
-                beatae corporis natus? Mollitia saepe iusto tempore deserunt
-                possimus? Ducimus laborum magnam culpa tempore amet sint
-                sapiente aperiam excepturi accusantium? Praesentium eius iste
-                molestiae? Impedit obcaecati exercitationem voluptatem
-                asperiores laborum nesciunt nemo a, incidunt dolores tempore
-                recusandae magnam vero odit, magni dignissimos doloribus nisi
-                totam fugiat quam ipsam aspernatur repellat.
-                <br />
-                <br />
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-                impedit corporis harum, ea similique quas delectus at laudantium
-                et molestiae obcaecati aliquam ipsa. Fugit nesciunt reiciendis
-                labore dicta dolorum aspernatur sint dolores earum corporis enim
-                quia iste, incidunt voluptas magni non sed possimus,
-                consectetur, nemo eaque! Eaque, cumque dignissimos dolore
-                deserunt maxime dicta molestias tempore enim ad dolores,
-                reprehenderit tenetur, suscipit ipsa placeat debitis voluptas
-                nobis. A maiores, voluptatem eligendi neque esse distinctio
-                dolor quas veniam, magni sapiente cum dolores! Vero id alias,
-                autem inventore officia dolorum tempora dignissimos officiis nam
-                reprehenderit fugit illo a exercitationem, consequuntur placeat,
-                at praesentium natus? Cum nemo sit odio fuga soluta voluptatum
-                ut maiores veniam commodi? Suscipit, earum. Vitae error possimus
-                ad quia illo animi tempora, itaque explicabo minima corrupti
-                libero facere optio saepe modi doloribus in voluptas! Porro
-                eaque voluptatum quae nam debitis exercitationem blanditiis! At
-                velit blanditiis voluptatem adipisci est fugiat deleniti.
-              </p>
-              <div class="button-group">
-                <button type="submit" class="btn btn-primary">
-                  <a href="./pendaftaranmagang.html">
-                    <span>DAFTAR</span>
-                  </a>
-                </button>
+            <div class="thumbnail-slider-container">
+              <div class="featured-image-container">
+                <img src="../assets/images/magang.jpg" id="featured-image" alt="featured-image" />
+              </div>
+              <div class="glide">
+                <div class="glide__track" data-glide-el="track">
+                  <ul class="glide__slides">
+                    <li class="glide__slide thumbnail-item">
+                      <img
+                        class="thumbnail-img"
+                        src="../assets/images/magang.jpg"
+                        alt="thumbnail-image"
+                      />
+                    </li>
+                    <li class="glide__slide thumbnail-item">
+                      <img
+                        class="thumbnail-img"
+                        src="../assets/images/graduate.jpg"
+                        alt="thumbnail-image"
+                      />
+                    </li>
+                    <li class="glide__slide thumbnail-item">
+                      <img
+                        class="thumbnail-img"
+                        src="../assets/images/event.jpg"
+                        alt="thumbnail-image"
+                      />
+                    </li>
+                    <li class="glide__slide thumbnail-item">
+                      <img
+                        class="thumbnail-img"
+                        src="../assets/images/kerjasama.jpg"
+                        alt="thumbnail-image"
+                      />
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -161,6 +146,8 @@
 
     <footer></footer>
 
+    <script src="../scripts/glide.min.js"></script>
     <script src="../scripts/global.js"></script>
+    <script src="../scripts/detail.kerjasama.js"></script>
   </body>
 </html>
