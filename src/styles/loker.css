@@ -158,6 +158,195 @@
   font-size: 12px;
 }
 
+.daftar-magang-container {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 75%;
+  justify-content: center;
+}
+
+.daftar-magang-container h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 26px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.form-group .control-label {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+form .form-control {
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  color: #495057;
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  outline: 0;
+  padding: 8px 15px;
+  transition: border-color 0.15s ease-in-out;
+  width: 100%;
+}
+
+form .form-control:focus {
+  border: 3px solid #b39ddb;
+}
+
+.form-title {
+  margin: 38px 0 10px 0;
+}
+
+.form-title h5 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+}
+
+.form-title hr {
+  border: 0;
+  border-top: 1px solid #ced4da;
+  margin: 20px 0;
+}
+
+.form-group-file {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.file {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  height: 2.5rem;
+}
+
+input#file {
+  display: none;
+}
+
+.file-custom {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 0;
+  height: 2.5rem;
+  padding: 0.5rem 1rem;
+  line-height: 1.5;
+  color: #555;
+  background-color: #fff;
+  border: 0.075rem solid #ced4da;
+  border-radius: 0.25rem;
+  user-select: none;
+}
+
+.file-custom:hover {
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.05);
+}
+
+.file-custom:before {
+  position: absolute;
+  top: -0.075rem;
+  right: -0.075rem;
+  bottom: -0.075rem;
+  z-index: 6;
+  display: block;
+  content: "Browse";
+  padding: 0.5rem 1rem;
+  line-height: 1.5;
+  color: #555;
+  background-color: #eee;
+  border: 0.075rem solid #ced4da;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.file-custom:after {
+  content: "Choose file...";
+}
+
+.form-group-date input {
+  font-size: 15px;
+  padding: 8px 15px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Modal */
+
+.success-daftar-modal-overlay {
+  display: none;
+  background: rgba(0, 0, 0, 0.2);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.success-daftar-modal-overlay.show-modal-overlay {
+  display: block;
+}
+
+.success-daftar-modal-content {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 5px;
+  padding: 50px 30px;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 3;
+}
+
+.success-daftar-modal-content.show-modal-content {
+  display: flex;
+}
+
+.success-daftar-modal-img-container {
+  height: 150px;
+  margin-bottom: 20px;
+  width: 150px;
+}
+
+.success-daftar-modal-img-container img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.success-daftar-modal-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.success-daftar-modal-caption {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
 /* Responsive breakpoint */
 
 @media screen and (max-width: 1168px) {
@@ -171,7 +360,7 @@
     flex-direction: column;
     padding: 40px 40px;
   }
-  
+
   .side-bar {
     margin-bottom: 30px;
   }
@@ -214,5 +403,24 @@
 
   .info-magang-container h3 {
     font-size: 24px;
+  }
+
+  /* Modal */
+
+  .success-daftar-modal-img-container {
+    height: 80px;
+    width: 80px;
+  }
+  
+  .success-daftar-modal-title {
+    font-size: 18px;
+  }
+  
+  .success-daftar-modal-caption {
+    font-size: 14px;
+  }
+
+  .sucess-daftar-close-modal-button span {
+    font-size: 12px;
   }
 }
