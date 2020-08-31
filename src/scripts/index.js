@@ -91,7 +91,7 @@ carouselSlide.addEventListener("transitionend", () => {
 let kerjasamaSLider = new Glide(".glide", {
   gap: 20,
   type: "carousel",
-  perView: 4,
+  perView: 5,
   breakpoints: {
     1024: {
       perView: 3,
