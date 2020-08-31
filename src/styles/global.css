@@ -326,7 +326,7 @@ nav ul li .sub-menu li a:hover::after {
   justify-content: center;
   background-color: #1c2331;
   height: 100%;
-  padding: 40px 25px;
+  padding: 25px 15px;
 }
 
 .footer-detail-item {
@@ -600,7 +600,7 @@ nav ul li .sub-menu li a:hover::after {
   }
 
   .footer-detail-item {
-    margin: 15px 15px;
+    margin: 5px 5px;
     text-align: center;
   }
 
