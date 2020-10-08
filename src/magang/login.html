@@ -7,7 +7,7 @@
       Kontak - UPT Pengembangan Karir dan Kewirausahaan | Universitas
       Pembangunan Nasional Veteran Jakarta
     </title>
-    <link rel="stylesheet" href="../styles/kontak.css" />
+    <link rel="stylesheet" href="../styles/magang.css" />
   </head>
 
   <body>
@@ -28,33 +28,24 @@
               <li><a href="../magang/login.html">Pendaftaran Magang</a></li>
             </ul>
           </div>
-          <div class="login">
-            <p>Login</p>
-            <form>
-              <table width="75%">
-                <tr>
-                  <td width="25%">Username</td>
-                  <td>
-                    <input type="text" name="username" placeholder="Username" />
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>Password</td>
-                  <td>
-                    <input
-                      type="password"
-                      name="password"
-                      placeholder="Password"
-                    />
-                  </td>
-                </tr>
-              </table>
+          <div class="daftar-magang-container">
+            <h3>Silahkan login di sini untuk input data magang</h3>
+            <form class="form-group">
+              <div class="form-group">
+                <label class="control-label" for="nim-username">
+                  NIM/Username
+                </label>
+                <input name="nim-username" type="text" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label class="control-label" for="password"> Password </label>
+                <input name="password" type="text" class="form-control" />
+              </div>
             </form>
             <div class="button-group">
-              <button type="submit" class="btn btn-primary">
+              <button class="btn btn-primary">
                 <a href="./inputdatamagang.html">
-                  <span>Login</span>
+                  <span>LOGIN</span>
                 </a>
               </button>
             </div>

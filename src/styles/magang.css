@@ -1,11 +1,11 @@
-@import "global.css";
+@import 'global.css';
 
 .nav-panel-container {
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: center;
-  background-image: url("../assets/images/magang.jpg");
+  background-image: url('../assets/images/magang.jpg');
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -16,7 +16,7 @@
 }
 
 .nav-panel-container::before {
-  content: "";
+  content: '';
   width: 100%;
   height: 200px;
   background: rgba(0, 0, 0, 0.71);
@@ -80,7 +80,7 @@
 }
 
 .info-magang-container h3 {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 30px;
   margin-bottom: 30px;
   align-self: flex-start;
@@ -126,7 +126,7 @@
 .text-durasi-magang {
   border: 1px solid black;
   border-radius: 5px;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 12px;
   font-weight: 700;
   padding: 4px;
@@ -135,14 +135,14 @@
 .text-job-desc {
   color: #6351ce;
   display: block;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 24px;
   margin: 20px 0 35px 0;
   text-decoration: none;
 }
 
 .text-company-hiring {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 10px;
 }
 
@@ -154,7 +154,7 @@
 }
 
 .more-info-item-magang span {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 12px;
 }
 
@@ -166,7 +166,7 @@
 }
 
 .daftar-magang-container h3 {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 26px;
   margin-bottom: 10px;
   text-align: left;
@@ -182,7 +182,7 @@
 }
 
 .form-group .control-label {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
 }
 
@@ -192,7 +192,7 @@ form .form-control {
   border-radius: 5px;
   color: #495057;
   display: block;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: 400;
   outline: 0;
@@ -210,7 +210,7 @@ form .form-control:focus {
 }
 
 .form-title h5 {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 22px;
 }
 
@@ -264,7 +264,7 @@ input#file {
   bottom: -0.075rem;
   z-index: 6;
   display: block;
-  content: "Browse";
+  content: 'Browse';
   padding: 0.5rem 1rem;
   line-height: 1.5;
   color: #555;
@@ -274,7 +274,7 @@ input#file {
 }
 
 .file-custom:after {
-  content: "Choose file...";
+  content: 'Choose file...';
 }
 
 .form-group-date input {
@@ -310,13 +310,73 @@ input#file {
 }
 
 .article-text h3 {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 18px;
   margin-bottom: 20px;
 }
 
 .article-text p {
   text-align: justify;
+}
+
+/* Modal */
+
+.success-daftar-modal-overlay {
+  display: none;
+  background: rgba(0, 0, 0, 0.2);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.success-daftar-modal-overlay.show-modal-overlay {
+  display: block;
+}
+
+.success-daftar-modal-content {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 5px;
+  padding: 50px 30px;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 3;
+}
+
+.success-daftar-modal-content.show-modal-content {
+  display: flex;
+}
+
+.success-daftar-modal-img-container {
+  height: 150px;
+  margin-bottom: 20px;
+  width: 150px;
+}
+
+.success-daftar-modal-img-container img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.success-daftar-modal-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.success-daftar-modal-caption {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 /* Responsive breakpoint */
@@ -387,5 +447,24 @@ input#file {
 
   .info-magang-container h3 {
     font-size: 24px;
+  }
+
+  /* Modal */
+
+  .success-daftar-modal-img-container {
+    height: 80px;
+    width: 80px;
+  }
+
+  .success-daftar-modal-title {
+    font-size: 18px;
+  }
+
+  .success-daftar-modal-caption {
+    font-size: 14px;
+  }
+
+  .sucess-daftar-close-modal-button span {
+    font-size: 12px;
   }
 }
